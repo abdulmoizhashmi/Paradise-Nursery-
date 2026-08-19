@@ -77,4 +77,60 @@ export function CartProvider({ children }) {
               }
             : item
         )
-        .filter((item) 
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
+  const removeFromCart = (id) => {
+    setCart((currentCart) =>
+      currentCart.filter((item) => item.id !== id)
+    );
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const totalItems = useMemo(() => {
+    return cart.reduce(
+      (total, item) => total + item.quantity,
+      0
+    );
+  }, [cart]);
+
+  const totalCost = useMemo(() => {
+    return cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  }, [cart]);
+
+  const value = {
+    cart,
+    addToCart,
+    increaseQuantity,
+    decreaseQuantity,
+    removeFromCart,
+    clearCart,
+    totalItems,
+    totalCost
+  };
+
+  return (
+    <CartContext.Provider value={value}>
+      {children}
+    </CartContext.Provider>
+  );
+}
+
+export function useCart() {
+  const context = useContext(CartContext);
+
+  if (!context) {
+    throw new Error(
+      "useCart must be used inside CartProvider"
+    );
+  }
+
+  return context;
+}

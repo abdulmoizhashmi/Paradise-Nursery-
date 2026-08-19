@@ -1,96 +1,118 @@
-export const plantCategories = [
+export const plants = [
+  // ============================
+  // AIR PURIFYING PLANTS
+  // ============================
+
   {
-    name: "Air Purifying Plants",
-    plants: [
-      {
-        id: "snake-plant",
-        name: "Snake Plant",
-        price: 15,
-        description: "Produces oxygen at night, improving air quality.",
-        image: "/images/snake-plant.png"
-      },
-      {
-        id: "spider-plant",
-        name: "Spider Plant",
-        price: 12,
-        description: "Filters formaldehyde and xylene from the air.",
-        image: "/images/spider-plant.png"
-      },
-      {
-        id: "peace-lily",
-        name: "Peace Lily",
-        price: 18,
-        description: "Removes mold spores and purifies the air.",
-        image: "/images/peace-lily.png"
-      },
-      {
-        id: "boston-fern",
-        name: "Boston Fern",
-        price: 14,
-        description: "Adds moisture to indoor air, perfect for dry spaces.",
-        image: "/images/boston-fern.webp"
-      },
-      {
-        id: "rubber-plant",
-        name: "Rubber Plant",
-        price: 22,
-        description: "Sturdy plant with beautiful glossy dark green leaves.",
-        image: "/images/rubber-plant.png"
-      },
-      {
-        id: "aloe-vera",
-        name: "Aloe Vera",
-        price: 10,
-        description: "Soothing gel inside leaves, loves sunny windows.",
-        image: "/images/aloe-vera.jpg"
-      }
-    ]
+    id: 1,
+    name: "Snake Plant",
+    price: 15,
+    category: "Air Purifying Plants",
+    description:
+      "Produces oxygen at night, improving air quality.",
+    image:
+      "https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=600&q=80"
   },
+
   {
-    name: "Aromatic Fragrant Plants",
-    plants: [
-      {
-        id: "lavender",
-        name: "Lavender",
-        price: 20,
-        description: "Calming scent, used in aromatherapy.",
-        image: "/images/lavender.jpg"
-      },
-      {
-        id: "jasmine",
-        name: "Jasmine",
-        price: 18,
-        description: "Sweet fragrance, promotes relaxation.",
-        image: "/images/jasmine.jpg"
-      },
-      {
-        id: "rosemary",
-        name: "Rosemary",
-        price: 15,
-        description: "Invigorating scent, often used in cooking.",
-        image: "/images/rosemary.jpg"
-      },
-      {
-        id: "mint",
-        name: "Mint",
-        price: 12,
-        description: "Fresh aroma, easy to grow and use in drinks.",
-        image: "/images/mint.jpg"
-      },
-      {
-        id: "lemon-balm",
-        name: "Lemon Balm",
-        price: 14,
-        description: "Citrusy scent, attracts bees and makes great tea.",
-        image: "/images/lemon-balm.jpg"
-      },
-      {
-        id: "hyacinth",
-        name: "Hyacinth",
-        price: 22,
-        description: "Intense sweet scent, lovely spring blooms.",
-        image: "/images/hyacinth.jpg"
-      }
-    ]
+    id: 2,
+    name: "Spider Plant",
+    price: 12,
+    category: "Air Purifying Plants",
+    description:
+      "Filters formaldehyde and xylene from the air.",
+    image:
+      "https://images.unsplash.com/photo-1572688484438-313a6e50c333?auto=format&fit=crop&w=600&q=80"
+  },
+
+  {
+    id: 3,
+    name: "Peace Lily",
+    price: 18,
+    category: "Air Purifying Plants",
+    description:
+      "Removes mold spores and purifies the air.",
+    image:
+      "https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=600&q=80"
+  },
+
+  // ============================
+  // AROMATIC / FRAGRANT PLANTS
+  // ============================
+
+  {
+    id: 4,
+    name: "Lavender",
+    price: 20,
+    category: "Aromatic Fragrant Plants",
+    description:
+      "Calming scent, commonly used in aromatherapy.",
+    image:
+      "https://images.unsplash.com/photo-1499002238440-d264edd596ec?auto=format&fit=crop&w=600&q=80"
+  },
+
+  {
+    id: 5,
+    name: "Jasmine",
+    price: 18,
+    category: "Aromatic Fragrant Plants",
+    description:
+      "Sweet fragrance that promotes relaxation.",
+    image:
+      "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80"
+  },
+
+  {
+    id: 6,
+    name: "Rosemary",
+    price: 15,
+    category: "Aromatic Fragrant Plants",
+    description:
+      "Invigorating scent, often used in cooking.",
+    image:
+      "https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=600&q=80"
+  },
+
+  // ============================
+  // HERBS & WELLNESS
+  // ============================
+
+  {
+    id: 7,
+    name: "Mint",
+    price: 12,
+    category: "Herbs & Wellness",
+    description:
+      "Refreshing herb with a cool and invigorating aroma.",
+    image:
+      "https://images.unsplash.com/photo-1628557044797-f21a177c37ec?auto=format&fit=crop&w=600&q=80"
+  },
+
+  {
+    id: 8,
+    name: "Lemon Balm",
+    price: 14,
+    category: "Herbs & Wellness",
+    description:
+      "A fragrant herb with a fresh lemon-like scent.",
+    image:
+      "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?auto=format&fit=crop&w=600&q=80"
+  },
+
+  {
+    id: 9,
+    name: "Aloe Vera",
+    price: 16,
+    category: "Herbs & Wellness",
+    description:
+      "A beautiful succulent known for its soothing properties.",
+    image:
+      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80"
   }
+];
+
+export const categories = [
+  "Air Purifying Plants",
+  "Aromatic Fragrant Plants",
+  "Herbs & Wellness"
 ];
