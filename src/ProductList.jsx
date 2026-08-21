@@ -7,6 +7,10 @@ export default function ProductList() {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
+  const handleAddToCart = (plant) => {
+    dispatch(addItem(plant));
+  };
+
   return (
     <main className="products-page">
       {categories.map((categoryName) => {
@@ -30,10 +34,11 @@ export default function ProductList() {
                     <p className="plant-description">{plant.description}</p>
                     <button
                       className="add-button"
-                      onClick={() => !isInCart && dispatch(addItem(plant))}
+                      onClick={() => handleAddToCart(plant)}
+                      disabled={isInCart}
                       style={{
                         backgroundColor: isInCart ? '#777777' : '#4caf50',
-                        cursor: isInCart ? 'default' : 'pointer',
+                        cursor: isInCart ? 'not-allowed' : 'pointer',
                       }}
                     >
                       {isInCart ? 'Added to Cart' : 'Add to Cart'}
